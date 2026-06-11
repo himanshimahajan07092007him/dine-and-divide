@@ -242,7 +242,6 @@
         input the total amounts to track details instantly"
       </p>
       <p class="legend">
-        💡
         <em
           >Pending contributions are marked with a subtle yellow status, while
           completed payments can be update to a clear green indicator, allowing
@@ -250,6 +249,34 @@
           later you can delete the record too."</em
         >
       </p>
+      <div class="type">
+        <select>
+          <option disabled selected hidden>Select Catagory</option>
+          <option>Travel ✈️</option>
+          <option>Food 🥗</option>
+          <option>Hostel 🏫</option>
+          <option>Trips 🗺️</option>
+          <option>Party 🎉</option>
+        </select>
+      </div>
+      <div class="details">
+        <input id="type_name" type="text" placeholder="Expense Name: ">
+        <input id="ttl_bill" type="text" placeholder="Total Expense: ">
+      </div>  
+      <h1 id="split">SPLIT DETAILS</h1>
+      <div class="split_container">
+        <div class="box">
+          <div class="name"><input id="name" type="text" placeholder="Name"></div>
+          <div class="amount"><input id="amount" type="text" placeholder="Amount"></div>
+          <div class="state">
+            <div class="pending"></div>
+            <div class="delete">❌</div>
+          </div>  
+        </div>
+      </div>
+      <div class="add_new">Add new person ➕</div>
+      <div class="reset_msg">Reset all details</div>
+      <div class="reset_btn">Reset</div>
     </div>
     <script src="script.js"></script>
   </body>
