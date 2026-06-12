@@ -106,7 +106,26 @@ body{
     justify-content: center;
     font-size: 6rem;
     font-family: "Syncopate";
-    color: antiquewhite;
+    color: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgb(230, 189, 109),rgba(252, 151, 74, 0.658),rgb(230, 189, 109)
+    );
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: strip 8s ease infinite;
+}
+@keyframes strip{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 #dine_dsr{
     align-items: center;
@@ -137,6 +156,7 @@ th{
 }
 .reset_btn:hover{
     transform: scale(1.03);
+    background-color: rgb(203, 72, 46);
 }
 .reset_btn{
     background-color: rgb(188, 52, 24);
@@ -166,7 +186,15 @@ th{
     justify-content: center;
     font-size: 6rem;
     font-family: "Syncopate";
-    color: antiquewhite;
+    color: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgb(230, 189, 109),rgba(252, 151, 74, 0.658),rgb(230, 189, 109)
+    );
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: strip 10s ease infinite;
 }
 #divide_dsr{
     align-items: center;
@@ -265,6 +293,7 @@ th{
 }
 .add_new:hover{
     transform: scale(1.03);
+    background-color: rgb(61, 113, 61);
 }
 .add_new{
     background-color: rgb(79, 161, 79);
@@ -295,41 +324,124 @@ th{
 }
 #name:hover{
     transform: scale(1.03);
+    background-color: rgb(178, 237, 214);
 }
 #name{
     transition: transform 0.1s linear;
 }
 #amount:hover{
     transform: scale(1.03);
+    background-color: rgb(205, 245, 230);
 }
 #amount{
     transition: transform 0.1s linear;
 }
 #name:hover{
     transform: scale(1.03);
+    background-color: rgb(205, 245, 230);
 }
 #name{
     transition: transform 0.1s linear;
 }
 #type_name:hover{
     transform: scale(1.03);
+    background-color: rgb(205, 245, 230);
 }
 #type_name{
     transition: transform 0.1s linear;
 }
 #ttl_bill:hover{
     transform: scale(1.03);
+    background-color: rgb(205, 245, 230);
 }
 #ttl_bill{
     transition: transform 0.1s linear;
 }
 .type select:hover{
     transform: scale(1.03);
+    background-color: rgb(205, 245, 230);
 }
 .type select{
     transition: transform 0.1s linear;
 }
-
-
-
+footer{
+    display: flex;
+    justify-content: space-around;
+    gap: 30rem;
+    margin: 3rem;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+}
+.slogan{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Montserrat Alternates";
+}
+.copyright{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Montserrat Alternates";
+}
+.title_f{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Syncopate";
+}
+.center{
+    color: rgb(179, 179, 179);
+}
+.dine_trcr{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Montserrat Alternates";
+}
+.dine_trcr:hover{
+    color: rgb(81, 172, 247);
+    text-decoration: underline;
+}
+.divide_trcr{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Montserrat Alternates";
+}
+.divide_trcr:hover{
+    color: (81, 172, 247);
+    text-decoration: underline;
+}
+.back{
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+    font-family: "Montserrat Alternates";
+}
+.back:hover{
+    color: rgb(81, 172, 247);
+    text-decoration: underline;
+}
+.github:hover{
+    transform: scale(1.09);
+}
+.github{
+    transition: transform 0.1s linear;
+}
+.linkdin:hover{
+    transform: scale(1.09);
+}
+.linkdin{
+    transition: transform 0.1s linear;
+}
+.gmail:hover{
+    transform: scale(1.09);
+}
+.gmail{
+    transition: transform 0.1s linear;
+}
+.instagram:hover{
+    transform: scale(1.09);
+}
+.instagram{
+    transition: transform 0.1s linear;
+}
 
