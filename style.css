@@ -408,7 +408,7 @@ footer{
     font-family: "Montserrat Alternates";
 }
 .divide_trcr:hover{
-    color: (81, 172, 247);
+    color: rgb(81, 172, 247);
     text-decoration: underline;
 }
 .back{
