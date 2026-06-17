@@ -73,3 +73,28 @@ states.forEach((state)=>{
         }
     })
 })
+split_box.addEventListener('click',(events)=>{
+    if (events.target.classList.contains('delete')) {
+        events.target.closest('.box').remove()
+    }
+})
+let reset_div=document.querySelector('#reset_divide')
+let expnse_name = document.querySelector('#type_name')
+let ttlbill = document.querySelector('#ttl_bill')
+let category = document.querySelector('#catagory_div')
+let names = document.querySelector('.name')
+let amt = document.querySelector('.amount')
+reset_div.addEventListener('click',()=>{
+    expnse_name.value=""
+    ttlbill.value=""
+    category.value="Select Category"
+    let boxes=document.querySelectorAll('.box')
+    boxes.forEach((dabba,index)=>{
+        if (index>0) {
+            boxes[index].remove()
+        }
+        else{names.value="";
+            amt.value="";
+        }
+    })
+})
