@@ -258,11 +258,15 @@ th{
     align-items:center;
     gap: 15px;
 }
+.split_container{
+    display: flex;
+    flex-direction: column;
+}
 .state{
     display: flex;
     align-items:center;
 }
-#name{
+.name{
     font-size: 2.1rem;
     font-family: "Montserrat Alternates";
     border-radius: 10%;
@@ -270,7 +274,7 @@ th{
     padding: 1rem;
     background-color: antiquewhite;
 }
-#amount{
+.amount{
     font-size: 2.1rem;
     font-family: "Montserrat Alternates";
     border-radius: 10%;
@@ -322,25 +326,25 @@ th{
 .delete{
     transition: transform 0.1s linear;
 }
-#name:hover{
+.name:hover{
     transform: scale(1.03);
     background-color: rgb(178, 237, 214);
 }
-#name{
+.name{
     transition: transform 0.1s linear;
 }
 #amount:hover{
     transform: scale(1.03);
     background-color: rgb(205, 245, 230);
 }
-#amount{
+.amount{
     transition: transform 0.1s linear;
 }
-#name:hover{
+.name:hover{
     transform: scale(1.03);
     background-color: rgb(205, 245, 230);
 }
-#name{
+.name{
     transition: transform 0.1s linear;
 }
 #type_name:hover{

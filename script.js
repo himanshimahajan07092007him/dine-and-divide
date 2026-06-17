@@ -40,24 +40,36 @@ checkbox_hrt.forEach((box,index)=>{
         box.checked=false;
     }
 })
-let div_rst = document.querySelector('#reset_divide')
-let type = document.querySelector('#catagory_div')
-let name_div1 = document.querySelector('#name')
-let name_div2 = document.querySelector('#type_name')
-let amount_div = document.querySelector('#amount')
-let bill = document.querySelector('#ttl_bill')
-div_rst.addEventListener('click',()=>{
-    name_div1.value="";
-    name_div2.value="";
-    amount_div.value="";
-    bill.value="";
-    type.value="Select Category";
+let add = document.querySelector('.add_new')
+let split_box= document.querySelector('.split_container')
+add.addEventListener('click',()=>{
+    let newbox = document.createElement('div')
+    newbox.classList.add('box')
+    newbox.innerHTML=`
+      <div><input class="name" type="text" placeholder="Name"></div>
+          <div><input class="amount" type="text" placeholder="Amount"></div>
+          <div class="state">
+            <div class="pending"></div>
+            <div class="delete">❌</div>
+          </div>  
+    `
+    let newpending = newbox.querySelector('.pending')
+    newpending.addEventListener('click',()=>{
+        if (newpending.style.backgroundColor === 'green') {
+            newpending.style.backgroundColor = 'yellow'; 
+        } else {
+            newpending.style.backgroundColor = 'green';  
+        }
+    })
+    split_box.appendChild(newbox)
 })
-let pending = document.querySelector('.pending')
-pending.addEventListener('click',()=>{
-    if (pending.style.backgroundColor === 'yellow') {
-        pending.style.backgroundColor = 'green'; 
-    } else {
-        pending.style.backgroundColor = 'yellow';  
-    }
+let states = document.querySelectorAll('.pending')
+states.forEach((state)=>{
+    state.addEventListener('click',()=>{
+        if (state.style.backgroundColor === 'green') {
+            state.style.backgroundColor = 'yellow'; 
+        } else {
+            state.style.backgroundColor = 'green';  
+        }
+    })
 })
