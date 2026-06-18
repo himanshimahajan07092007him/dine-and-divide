@@ -98,3 +98,22 @@ reset_div.addEventListener('click',()=>{
         }
     })
 })
+let backtoDine = document.querySelector('.dine_trcr')
+backtoDine.addEventListener('click',()=>{
+    toggle.checked=false;
+    divide.style.display = 'none'
+    dine.style.display = 'block'
+})
+let backtoDivide = document.querySelector('.divide_trcr')
+backtoDivide.addEventListener('click',()=>{
+    toggle.checked=true;
+    divide.style.display = 'block'
+    dine.style.display = 'none'
+})
+let backtoTop=document.querySelector('.back')
+backtoTop.addEventListener('click',()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+})
