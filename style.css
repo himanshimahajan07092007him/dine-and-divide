@@ -516,9 +516,8 @@ footer {
     padding: 0%;
   }
   table {
-    max-width: 140px;
-    height: 30vh;
-    overflow-x: scroll;
+    width: 100%;
+    overflow: auto;
   }
   .reset_msg {
     font-size: 1.1rem;
@@ -580,6 +579,7 @@ footer {
   .details {
     font-size: 1.1rem;
     flex-direction: column;
+    margin: 2.4%;
   }
   #split {
     font-size: 1.1rem;
@@ -589,9 +589,11 @@ footer {
   }
   #type_name {
     font-size: 1.1rem;
+    margin: 2.4%;
   }
   #ttl_bill {
     font-size: 1.1rem;
+    margin: 2.4%;
   }
   .name {
     font-size: 1.1rem;
