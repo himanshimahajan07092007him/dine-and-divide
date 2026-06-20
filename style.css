@@ -1,451 +1,621 @@
-body{
-    background-color: rgb(24, 24, 24);
-    color: rgb(255, 253, 237);
+body {
+  background-color: rgb(24, 24, 24);
+  color: rgb(255, 253, 237);
 }
-.wrapper{
-    min-height: 80vh;
-    max-width: 98vw;
-    margin: 3rem auto 0 auto;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
+.wrapper {
+  min-height: 80vh;
+  max-width: 98vw;
+  margin: 1.5rem 0 0 auto;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
     ),
     url("assets/clouds.jpg");
-    background-size:cover ;
-    border-radius: 3%;
-}
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    padding-top: 0.5rem;
-    padding-left: 2.7rem;
-}
-.nav p{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    font-weight: 400;
-    word-spacing: 0.5rem;
-    letter-spacing: 0.25rem;
-    color:antiquewhite;
-    line-height: 0.2rem;
-}
-#switch{
-    opacity: 0%;
-}
-.capsule{
-    background-color: rgb(66, 69, 72);
-    display: block;
-    height: 2.6rem;
-    width: 6rem;
-    border-radius: 22%;
-    position: relative;
-}
-#switch:checked +.capsule .circle{
-    transform: translateX(3.8rem);
-}
-.circle{
-    position: absolute;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    width: 2.3rem;
-    height: 2.3rem;
-    margin: 0.1rem;
-    transition: transform 0.4s ease;
-}
-#title{
-    font-size: 9rem;
-    font-family: "Syncopate";
-    color: antiquewhite;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-top: 22vh;
-}
-.heart-checkbox{
-    display: none;
-}
-.empty_hrt{
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-}
-.filled_hrt{
-    display: none;
-}
-.days{
-    display: flex;
-    justify-content: center;
-    font-family: "Syncopate";
-    color: antiquewhite;
-    font-size: 1.6rem;
-    line-height: 7rem;
-}
-.heart-checkbox:checked ~ .empty_hrt{
-    display: none;
-}
-.heart-checkbox:checked ~ .filled_hrt{
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-}
-.line{
-    background:linear-gradient(
-        to right,
-        transparent,rgb(197, 70, 70,0.3),rgb(230, 189, 109),rgb(197, 70, 70,0.3),transparent
-    );
-    height: 1.3rem;
-    margin-top: 5rem;
-}
-#dine_t{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 6rem;
-    font-family: "Syncopate";
-    color: transparent;
-    background-image: linear-gradient(
-        to right,
-        rgb(230, 189, 109),rgba(252, 151, 74, 0.658),rgb(230, 189, 109)
-    );
-    background-size: 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: strip 8s ease infinite;
-}
-@keyframes strip{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
-}
-#dine_dsr{
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-family: "Montserrat Alternates";
-    line-height: 4rem;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    color: antiquewhite;
-}
-.legend{
-    font-size: 2.06rem;
-    color: rgb(254, 254, 145);
-    padding: 1rem;
-}
-table{
-    width: 140rem;
-    max-width: 140rem;
-}
-th{
-    font-size: 2.5rem;
-    font-family: "Syncopate";
-    color: antiquewhite;
-}
-#reset_menu{
-    display: none;
-}
-.reset_btn:hover{
-    transform: scale(1.03);
-    background-color: rgb(203, 72, 46);
-}
-.reset_btn{
-    background-color: rgb(188, 52, 24);
-    font-family: "Montserrat Alternates";
-    font-size: 2rem;
-    font-weight: 600;
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    padding: 0.7rem;
-    border-radius: 13%;
-    transition: transform 0.1s linear;
-}
-.reset_msg{
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-    color: rgb(254, 254, 145);
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-}
-#divide_t{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 6rem;
-    font-family: "Syncopate";
-    color: transparent;
-    background-image: linear-gradient(
-        to right,
-        rgb(230, 189, 109),rgba(252, 151, 74, 0.658),rgb(230, 189, 109)
-    );
-    background-size: 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: strip 10s ease infinite;
-}
-#divide_dsr{
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-family: "Montserrat Alternates";
-    line-height: 4rem;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    color: antiquewhite;
-}
-.type{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.type select{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: antiquewhite;
-}
-.details{
-    display: flex;
-    justify-content:space-around;
-    align-items:center;
-}
-#type_name{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: antiquewhite;
-}
-#ttl_bill{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: antiquewhite;
-}
-#split{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.1rem;
-    font-family: "Syncopate";
-    border-radius: 10%;
-    font-weight: 550;
-    padding: 1rem;
-    color: antiquewhite;
-    letter-spacing: 0.2rem;
-}
-.box{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    gap: 15px;
-}
-.split_container{
-    display: flex;
-    flex-direction: column;
-}
-.state{
-    display: flex;
-    align-items:center;
-}
-.name{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: antiquewhite;
-}
-.amount{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: antiquewhite;
-}
-.delete{
-    font-size: 2.1rem;
-    font-family: "Montserrat Alternates";
-    border-radius: 10%;
-    font-weight: 500;
-    padding: 1rem;
-}
-.pending{
-    height: 2.6rem;
-    width: 2.6rem;
-    border-radius: 50%;
-    background-color: yellow;
-}
-.add_new:hover{
-    transform: scale(1.03);
-    background-color: rgb(61, 113, 61);
-}
-.add_new{
-    background-color: rgb(79, 161, 79);
-    font-family: "Montserrat Alternates";
-    font-size: 2rem;
-    font-weight: 600;
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    padding: 0.7rem;
-    border-radius: 10%;
-    margin: 3rem;
-    transition: transform 0.1s linear;
-}
-.pending:hover{
-    transform: scale(1.09);
-}
-.pending{
-    transition: transform 0.1s linear;
-}
-.delete:hover{
-    transform: scale(1.09);
-}
-.delete{
-    transition: transform 0.1s linear;
-}
-.name:hover{
-    transform: scale(1.03);
-    background-color: rgb(178, 237, 214);
-}
-.name{
-    transition: transform 0.1s linear;
-}
-#amount:hover{
-    transform: scale(1.03);
-    background-color: rgb(205, 245, 230);
-}
-.amount{
-    transition: transform 0.1s linear;
-}
-.name:hover{
-    transform: scale(1.03);
-    background-color: rgb(205, 245, 230);
-}
-.name{
-    transition: transform 0.1s linear;
-}
-#type_name:hover{
-    transform: scale(1.03);
-    background-color: rgb(205, 245, 230);
-}
-#type_name{
-    transition: transform 0.1s linear;
-}
-#ttl_bill:hover{
-    transform: scale(1.03);
-    background-color: rgb(205, 245, 230);
-}
-#ttl_bill{
-    transition: transform 0.1s linear;
-}
-.type select:hover{
-    transform: scale(1.03);
-    background-color: rgb(205, 245, 230);
-}
-.type select{
-    transition: transform 0.1s linear;
-}
-footer{
-    display: flex;
-    justify-content: space-around;
-    gap: 30rem;
-    margin: 3rem;
-}
-.right{
-    display: flex;
-    justify-content: space-around;
-    gap: 4rem;
-}
-.slogan{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-}
-.copyright{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-}
-.title_f{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Syncopate";
-}
-.center{
-    color: rgb(179, 179, 179);
-}
-.dine_trcr{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-}
-.dine_trcr:hover{
-    color: rgb(81, 172, 247);
-    text-decoration: underline;
-}
-.divide_trcr{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-}
-.divide_trcr:hover{
-    color: rgb(81, 172, 247);
-    text-decoration: underline;
-}
-.back{
-    color: rgb(179, 179, 179);
-    font-size: 1.7rem;
-    font-family: "Montserrat Alternates";
-}
-.back:hover{
-    color: rgb(81, 172, 247);
-    text-decoration: underline;
-}
-.github:hover{
-    transform: scale(1.09);
-}
-.github{
-    transition: transform 0.1s linear;
-}
-.linkdin:hover{
-    transform: scale(1.09);
-}
-.linkdin{
-    transition: transform 0.1s linear;
-}
-.gmail:hover{
-    transform: scale(1.09);
-}
-.gmail{
-    transition: transform 0.1s linear;
-}
-.instagram:hover{
-    transform: scale(1.09);
-}
-.instagram{
-    transition: transform 0.1s linear;
+  background-size: cover;
+  border-radius: 3%;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  padding-top: 0.5rem;
+  padding-left: 2.7rem;
+}
+.nav p {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
+  color: antiquewhite;
+  line-height: 0.2rem;
+}
+#switch {
+  opacity: 0%;
+}
+.capsule {
+  background-color: rgb(66, 69, 72);
+  display: block;
+  height: 2.6rem;
+  width: 6rem;
+  border-radius: 22%;
+  position: relative;
+}
+#switch:checked + .capsule .circle {
+  transform: translateX(3.8rem);
+}
+.circle {
+  position: absolute;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin: 0.1rem;
+  transition: transform 0.4s ease;
+}
+#title {
+  font-size: 9rem;
+  font-family: "Syncopate";
+  color: antiquewhite;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 22vh;
+}
+.heart-checkbox {
+  display: none;
+}
+.empty_hrt {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+.filled_hrt {
+  display: none;
+}
+.days {
+  display: flex;
+  justify-content: center;
+  font-family: "Syncopate";
+  color: antiquewhite;
+  font-size: 1.6rem;
+  line-height: 7rem;
+}
+.heart-checkbox:checked ~ .empty_hrt {
+  display: none;
+}
+.heart-checkbox:checked ~ .filled_hrt {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+.line {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(197, 70, 70, 0.3),
+    rgb(230, 189, 109),
+    rgb(197, 70, 70, 0.3),
+    transparent
+  );
+  height: 1.3rem;
+  margin-top: 5rem;
+}
+#dine_t {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-family: "Syncopate";
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(230, 189, 109),
+    rgba(252, 151, 74, 0.658),
+    rgb(230, 189, 109)
+  );
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: strip 8s ease infinite;
+}
+@keyframes strip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#dine_dsr {
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates";
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: antiquewhite;
+}
+.legend {
+  font-size: 2.06rem;
+  color: rgb(254, 254, 145);
+  padding: 1rem;
+}
+table {
+  width: 140rem;
+  max-width: 140rem;
+}
+th {
+  font-size: 2.5rem;
+  font-family: "Syncopate";
+  color: antiquewhite;
+}
+#reset_menu {
+  display: none;
+}
+.reset_btn:hover {
+  transform: scale(1.03);
+  background-color: rgb(203, 72, 46);
+}
+.reset_btn {
+  background-color: rgb(188, 52, 24);
+  font-family: "Montserrat Alternates";
+  font-size: 2rem;
+  font-weight: 600;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  padding: 0.7rem;
+  border-radius: 13%;
+  transition: transform 0.1s linear;
+}
+.reset_msg {
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+  color: rgb(254, 254, 145);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+#divide_t {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-family: "Syncopate";
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(230, 189, 109),
+    rgba(252, 151, 74, 0.658),
+    rgb(230, 189, 109)
+  );
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: strip 10s ease infinite;
+}
+#divide_dsr {
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates";
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: antiquewhite;
+}
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type select {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#type_name {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+#ttl_bill {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+#split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.1rem;
+  font-family: "Syncopate";
+  border-radius: 10%;
+  font-weight: 550;
+  padding: 1rem;
+  color: antiquewhite;
+  letter-spacing: 0.2rem;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.split_container {
+  display: flex;
+  flex-direction: column;
+}
+.state {
+  display: flex;
+  align-items: center;
+}
+.name {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+.amount {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+.delete {
+  font-size: 2.1rem;
+  font-family: "Montserrat Alternates";
+  border-radius: 10%;
+  font-weight: 500;
+  padding: 1rem;
+}
+.pending {
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 50%;
+  background-color: yellow;
+}
+.add_new:hover {
+  transform: scale(1.03);
+  background-color: rgb(61, 113, 61);
+}
+.add_new {
+  background-color: rgb(79, 161, 79);
+  font-family: "Montserrat Alternates";
+  font-size: 2rem;
+  font-weight: 600;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  padding: 0.7rem;
+  border-radius: 10%;
+  margin: 3rem;
+  transition: transform 0.1s linear;
+}
+.pending:hover {
+  transform: scale(1.09);
+}
+.pending {
+  transition: transform 0.1s linear;
+}
+.delete:hover {
+  transform: scale(1.09);
+}
+.delete {
+  transition: transform 0.1s linear;
+}
+.amount:hover {
+  transform: scale(1.03);
+  background-color: rgb(205, 245, 230);
+}
+.amount {
+  transition: transform 0.1s linear;
+}
+.name:hover {
+  transform: scale(1.03);
+  background-color: rgb(205, 245, 230);
+}
+.name {
+  transition: transform 0.1s linear;
+}
+#type_name:hover {
+  transform: scale(1.03);
+  background-color: rgb(205, 245, 230);
+}
+#type_name {
+  transition: transform 0.1s linear;
+}
+#ttl_bill:hover {
+  transform: scale(1.03);
+  background-color: rgb(205, 245, 230);
+}
+#ttl_bill {
+  transition: transform 0.1s linear;
+}
+.type select:hover {
+  transform: scale(1.03);
+  background-color: rgb(205, 245, 230);
+}
+.type select {
+  transition: transform 0.1s linear;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 30rem;
+  margin: 3rem;
+}
+.right {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+}
+.slogan {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+}
+.copyright {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+}
+.title_f {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Syncopate";
+}
+.center {
+  color: rgb(179, 179, 179);
+}
+.dine_trcr {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+}
+.dine_trcr:hover {
+  color: rgb(81, 172, 247);
+  text-decoration: underline;
+}
+.divide_trcr {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+}
+.divide_trcr:hover {
+  color: rgb(81, 172, 247);
+  text-decoration: underline;
+}
+.back {
+  color: rgb(179, 179, 179);
+  font-size: 1.7rem;
+  font-family: "Montserrat Alternates";
+}
+.back:hover {
+  color: rgb(81, 172, 247);
+  text-decoration: underline;
+}
+.github:hover {
+  transform: scale(1.09);
+}
+.github {
+  transition: transform 0.1s linear;
+}
+.linkdin:hover {
+  transform: scale(1.09);
+}
+.linkdin {
+  transition: transform 0.1s linear;
+}
+.gmail:hover {
+  transform: scale(1.09);
+}
+.gmail {
+  transition: transform 0.1s linear;
+}
+.instagram:hover {
+  transform: scale(1.09);
+}
+.instagram {
+  transition: transform 0.1s linear;
+}
+.center {
+  display: flex;
+  flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 0.3rem auto 0 auto;
+  }
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    font-weight: 400;
+  }
+  .capsule {
+    width: 3rem;
+    height: 1.5rem;
+  }
+  .circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0;
+  }
+  #switch:checked + .capsule .circle {
+    transform: translateX(2rem);
+  }
+  #title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 20vh;
+  }
+  .line {
+    height: 0.6rem;
+    margin-top: 7%;
+  }
+  #dine_t {
+    font-size: 3rem;
+    margin-top: 20%;
+    margin-bottom: 2.2%;
+  }
+  #dine_dsr {
+    font-size: 1rem;
+    word-spacing: 0.1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    padding: 2.5%;
+    letter-spacing: 0.02rem;
+  }
+  .legend {
+    font-size: 1.1rem;
+  }
+  th {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+  .days {
+    font-size: 1rem;
+    padding: 0%;
+  }
+  table {
+    max-width: 140px;
+    height: 30vh;
+    overflow-x: scroll;
+  }
+  .reset_msg {
+    font-size: 1.1rem;
+  }
+  .reset_btn {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .title_f {
+    font-size: 1.2rem;
+  }
+  .slogan {
+    font-size: 1.1rem;
+  }
+  .copyright {
+    font-size: 1.1rem;
+  }
+  .dine_trcr {
+    font-size: 1.1rem;
+  }
+  .divide_trcr {
+    font-size: 1.1rem;
+  }
+  .back {
+    font-size: 1.1rem;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .right {
+    width: 40vw;
+    gap: 2rem;
+  }
+  .center {
+    gap: 0.02rem;
+  }
+  #divide_t {
+    font-size: 3rem;
+    margin-top: 20%;
+    margin-bottom: 2.2%;
+  }
+  #divide_dsr {
+    font-size: 1rem;
+    word-spacing: 0.1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    padding: 2.5%;
+    letter-spacing: 0.02rem;
+  }
+  #catagory_div {
+    font-size: 1.1rem;
+  }
+  .details {
+    font-size: 1.1rem;
+    flex-direction: column;
+  }
+  #split {
+    font-size: 1.1rem;
+  }
+  .box {
+    flex-direction: column;
+  }
+  #type_name {
+    font-size: 1.1rem;
+  }
+  #ttl_bill {
+    font-size: 1.1rem;
+  }
+  .name {
+    font-size: 1.1rem;
+  }
+  .amount {
+    font-size: 1.1rem;
+  }
+  .pending {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .delete {
+    font-size: 1.5rem;
+  }
+  .add_new {
+    font-size: 1.1rem;
+  }
+  option {
+    font-size: 1.1rem;
+  }
+  .empty_hrt {
+    font-size: 1.4rem;
+  }
+  .filled_hrt{
+    font-size: 1rem;
+  }
+}
