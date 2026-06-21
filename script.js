@@ -188,6 +188,9 @@ reset_div.addEventListener("click", () => {
   localStorage.removeItem("expnse_name");
   localStorage.removeItem("ttlbill");
   localStorage.removeItem("category");
+
+  count=1;
+  localStorage.setItem("boxCount", 1);
 });
 let backtoDine = document.querySelector(".dine_trcr");
 backtoDine.addEventListener("click", () => {
